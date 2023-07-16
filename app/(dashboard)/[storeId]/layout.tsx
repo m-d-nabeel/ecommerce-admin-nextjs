@@ -1,10 +1,8 @@
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-
-import Navbar from "@/components/navbar";
 import prismaDb from "@/lib/prisma-db";
-
+import Navbar from "@/components/navbar";
 
 type props = {
   children: React.ReactNode;

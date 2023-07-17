@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 import { useStoreModal } from "@/hooks/use-store-modal";
 import { Modal } from "@/components/ui/modals";
@@ -27,7 +27,7 @@ const formSchema = z.object({
 
 export const StoreModal = () => {
   const storeModal = useStoreModal();
-  const router = useRouter();
+  // const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -45,7 +45,7 @@ export const StoreModal = () => {
       window.location.assign(`/${response.data.id}`);
 
       // not refreshing the state and rendering the page as i expected
-      // router.push(`/${response.data.id}`);
+      // with router.push(`/${response.data.id}`);
       // got stuck with the modal which could not get off the screen
 
     } catch (error) {

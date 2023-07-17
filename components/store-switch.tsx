@@ -72,7 +72,7 @@ export default function StoreSwitch({
           className="w-[200px] justify-between whitespace-nowrap"
         >
           <StoreIcon className="mr-2 h-4 w-4" />
-          {currentStore?.label}
+          {currentStore ? currentStore.label : "Store Unavailable"}
           <ChevronsUpDown className="ml-auto w-4 h-4 opacity-50 shrink-0" />
         </Button>
       </PopoverTrigger>

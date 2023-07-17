@@ -12,9 +12,10 @@ import { useEffect } from "react";
 export default function Home() {
   const { isOpen, onOpen } = useStoreModal();
 
-  // useEffect(() => {
-  //   if (!isOpen) onOpen();
-  // }, [isOpen, onOpen]);
+  useEffect(() => {
+    if (!isOpen) onOpen();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="w-full h-full flex flex-col items-center">

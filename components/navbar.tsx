@@ -1,10 +1,11 @@
-import { UserButton, auth } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 import MainNav from "@/components/main-nav";
 import StoreSwitch from "@/components/store-switch";
-import prismaDb from "@/lib/prisma-db";
 import { ModeToggle } from "@/components/theme-toggle";
+import prismaDb from "@/lib/prisma-db";
 
 export default async function Navbar() {
   const { userId } = auth();

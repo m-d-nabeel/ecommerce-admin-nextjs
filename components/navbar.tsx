@@ -22,7 +22,7 @@ export default async function Navbar() {
       <MainNav />
       <div className="ml-auto flex tems-center gap-x-4">
         <ModeToggle />
-        <UserButton afterSignOutUrl="/" />
+        <UserButton />
       </div>
     </nav>
   );

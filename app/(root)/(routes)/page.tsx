@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!isOpen) onOpen();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <StoreSwitch items={[]} />
         <div className="flex items-center ml-auto gap-x-4">
           <ModeToggle />
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
         </div>
       </div>
       <div className="text-center h-full flex-col items-center flex justify-center">
